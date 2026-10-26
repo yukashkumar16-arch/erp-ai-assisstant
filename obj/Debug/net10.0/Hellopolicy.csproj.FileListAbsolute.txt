@@ -1,0 +1,14 @@
+c:\study\AI\Hellopolicy\bin\Debug\net10.0\Hellopolicy.exe
+c:\study\AI\Hellopolicy\bin\Debug\net10.0\Hellopolicy.deps.json
+c:\study\AI\Hellopolicy\bin\Debug\net10.0\Hellopolicy.runtimeconfig.json
+c:\study\AI\Hellopolicy\bin\Debug\net10.0\Hellopolicy.dll
+c:\study\AI\Hellopolicy\bin\Debug\net10.0\Hellopolicy.pdb
+c:\study\AI\Hellopolicy\obj\Debug\net10.0\Hellopolicy.GeneratedMSBuildEditorConfig.editorconfig
+c:\study\AI\Hellopolicy\obj\Debug\net10.0\Hellopolicy.AssemblyInfoInputs.cache
+c:\study\AI\Hellopolicy\obj\Debug\net10.0\Hellopolicy.AssemblyInfo.cs
+c:\study\AI\Hellopolicy\obj\Debug\net10.0\Hellopolicy.csproj.CoreCompileInputs.cache
+c:\study\AI\Hellopolicy\obj\Debug\net10.0\Hellopolicy.dll
+c:\study\AI\Hellopolicy\obj\Debug\net10.0\refint\Hellopolicy.dll
+c:\study\AI\Hellopolicy\obj\Debug\net10.0\Hellopolicy.pdb
+c:\study\AI\Hellopolicy\obj\Debug\net10.0\Hellopolicy.genruntimeconfig.cache
+c:\study\AI\Hellopolicy\obj\Debug\net10.0\ref\Hellopolicy.dll
