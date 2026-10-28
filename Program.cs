@@ -1,8 +1,11 @@
-﻿string itemname = "ironrod";
-int quantity = 5;
-decimal unitprice = 50;
+﻿string claimstatus = "pending";
 
-decimal totalvalue = quantity * unitprice;
-decimal gst = totalvalue * 18/100;
+string status = claimstatus switch
+{
+    "pending"=>"waiting for review",
+    "Approved" =>"ready for payment",
+    "reject" => "rejected transaction"
+};
 
-Console.WriteLine($"Item name {itemname} quantity is {quantity} unit price is {unitprice} gst is {gst}");
+
+Console.WriteLine(status);

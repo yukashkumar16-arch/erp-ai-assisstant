@@ -10,3 +10,8 @@
 - Built: variable programs (string, int, decimal, bool), GST calculator, stock value calculator
 - Broke: assigned text to an int box (CS0029); removed $ and saw curly brackets print as text
 - Learned:types and interpolation and some console writelines and decimal and int difference.
+
+   ## Wed 28 Oct 2026 (Week 1 Day 2)
+   - Built: claim approval rules with if/else if, boundary test, switch on claim status
+   - Broke: switch without a fallback (CS8509 warning)
+   - Learned: if else,and switch condition
