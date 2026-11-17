@@ -15,3 +15,5 @@
    - Built: claim approval rules with if/else if, boundary test, switch on claim status
    - Broke: switch without a fallback (CS8509 warning)
    - Learned: if else,and switch condition
+   ## Sunday 15-nov 2026
+   --Built loops and checked.
