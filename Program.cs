@@ -1,18 +1,32 @@
-﻿static decimal Addgst(decimal price)
+﻿static decimal Calculateprice(decimal price,int ticket)
 {
-    decimal gst = 0.18m * price;
-    return price = price + gst;
+    decimal subtotal = 0m;
+    return subtotal = price * ticket;
 }
 
-static decimal AddpricewithDiscount(decimal price)
+static decimal finalprice(decimal price,int ticket)
 {
-    decimal gst = 0.18m * price;
-    decimal discount = 10m * price/100;
-    return price = price + gst - discount;
+    decimal subtotal = 0m;
+    decimal finalprice = 0m;
+   subtotal = Calculateprice(price,ticket);
+   return finalprice = subtotal + subtotal * 0.18m;
 
 }
-Console.WriteLine(Addgst(200));
-Console.WriteLine(Addgst(50));
 
-Console.WriteLine(AddpricewithDiscount(200));
-Console.WriteLine(AddpricewithDiscount(50));
+Console.WriteLine(Calculateprice(150m,3));
+Console.WriteLine(Calculateprice(120m,5));
+Console.WriteLine(finalprice(100m,2));
+
+string[] movies = {"beast","leo","AA","bb","ccc"};
+decimal[] price = {120m,110,100,150m,250m};
+
+// foreach(string movie in movies)
+// {
+    
+    
+// }
+
+for(int i=0;i<movies.Length;i++)
+{
+    Console.WriteLine($"Movies final {movies[i]} price is {finalprice(price[i],2)}");
+}

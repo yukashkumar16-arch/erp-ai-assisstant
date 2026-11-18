@@ -17,3 +17,7 @@
    - Learned: if else,and switch condition
    ## Sunday 15-nov 2026
    --Built loops and checked.
+   ## 17-11-2026
+   today i learned Static method with return type and i wrote console with the gst and applydiscount logic.
+
+   ## today loops and calling the method and guessing the value and calculation inside the methods checked.
