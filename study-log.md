@@ -21,3 +21,5 @@
    today i learned Static method with return type and i wrote console with the gst and applydiscount logic.
 
    ## today loops and calling the method and guessing the value and calculation inside the methods checked.
+   ##19-11-2026
+   ##if conditions inside static methods like find the ticket price with logic
