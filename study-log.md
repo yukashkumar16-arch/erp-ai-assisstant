@@ -23,3 +23,6 @@
    ## today loops and calling the method and guessing the value and calculation inside the methods checked.
    ##19-11-2026
    ##if conditions inside static methods like find the ticket price with logic
+
+   #20-11-2026
+   Today's topic iindex and debug in vs code.
