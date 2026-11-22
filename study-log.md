@@ -26,3 +26,5 @@
 
    #20-11-2026
    Today's topic iindex and debug in vs code.
+   #21-11-2026
+   Today i created one ticket calculator with certain condition 
