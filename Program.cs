@@ -1,45 +1,58 @@
 ﻿
-Movie leo = new Movie("Leo",150m);
-Movie beast = new Movie("Beast",180m);
-Movie Master = new Movie("Master",250m);
 
-List<Movie> movies = new List<Movie> {leo,beast,Master};
 
-foreach(Movie m in movies)
+using System.Reflection.Metadata;
+using System.Security.Cryptography;
+
+Theatre th = new Theatre("PVR",10);
+
+bool gl = th.Bookseats(4);
+Console.WriteLine($"1.{gl} seats Left {th.Seatsleft}");
+
+bool gl2 = th.Bookseats(7);
+Console.WriteLine($"2.{gl2} seats Left {th.Seatsleft}");
+
+bool gl3 = th.Bookseats(0);
+Console.WriteLine($"3.{gl3} Seats Left {th.Seatsleft}");
+
+bool gl4 = th.Bookseats(6);
+Console.WriteLine($"4.{gl4} seats left {th.Seatsleft}");
+
+bool gl5 = th.Bookseats(1);
+Console.WriteLine($"5.{gl5} Seats left {th.Seatsleft}");
+
+
+Theatre th2 = new Theatre("local",10);
+Console.WriteLine(th2.Bookseats(-3));
+class Theatre
 {
-    Console.WriteLine($"movie {m.Title} Rs is {m.Price} with gst {m.PremiumGst()}");
-}
 
+    private int _seats;
 
-class Movie
-{
-    public string Title { get; set;}
-    //public decimal Price {get;set;}
-    private decimal _price;
-
-    public decimal Price
+    public int Seatsleft
     {
-        get {return _price;}
-        set
+        get {return _seats;}
+    }
+
+    public string _name;
+    public bool Bookseats(int count)
+    {
+        if (count <= 0 || count > _seats)
         {
-            if(value <0)
-            {
-                throw new ArgumentException("Price can't be in minus");
-            }
-            _price = value;
+            return false;
+        }
+        else
+        {
+            _seats = _seats - count;
+            return true;
         }
     }
-
-    public decimal PremiumGst()
+    public Theatre(string name, int seats)
     {
-        return Price + Price * 0.18m;
+        _seats = seats;
+        _name = name;
+
     }
 
-    public Movie(string title,decimal price)
-    {
-        Title = title;
-        Price = price;
-    }
 
 }
-

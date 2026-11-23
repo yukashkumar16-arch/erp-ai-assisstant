@@ -28,3 +28,7 @@
    Today's topic iindex and debug in vs code.
    #21-11-2026
    Today i created one ticket calculator with certain condition 
+   #22-11-2026
+   today started class
+
+   #23-11-2026 class with constructor assigning value to accesor get set and with private property and use the class outside as object.
