@@ -32,3 +32,5 @@
    today started class
 
    #23-11-2026 class with constructor assigning value to accesor get set and with private property and use the class outside as object.
+
+   #24-11-2026 added null reference code Movie? that means this could be null and handled the issues 

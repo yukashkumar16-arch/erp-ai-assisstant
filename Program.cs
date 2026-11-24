@@ -1,58 +1,73 @@
-﻿
+﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 
+Movie? found = FoundMovie("Master");
 
-using System.Reflection.Metadata;
-using System.Security.Cryptography;
-
-Theatre th = new Theatre("PVR",10);
-
-bool gl = th.Bookseats(4);
-Console.WriteLine($"1.{gl} seats Left {th.Seatsleft}");
-
-bool gl2 = th.Bookseats(7);
-Console.WriteLine($"2.{gl2} seats Left {th.Seatsleft}");
-
-bool gl3 = th.Bookseats(0);
-Console.WriteLine($"3.{gl3} Seats Left {th.Seatsleft}");
-
-bool gl4 = th.Bookseats(6);
-Console.WriteLine($"4.{gl4} seats left {th.Seatsleft}");
-
-bool gl5 = th.Bookseats(1);
-Console.WriteLine($"5.{gl5} Seats left {th.Seatsleft}");
-
-
-Theatre th2 = new Theatre("local",10);
-Console.WriteLine(th2.Bookseats(-3));
-class Theatre
+if(found == null)
 {
+    
+Console.WriteLine($"not found");
+}
+else
+{
+    
+Console.WriteLine($"found{found.Title}");
+}
 
-    private int _seats;
 
-    public int Seatsleft
+string[] cast = new string[3];
+cast[0] = "Vijay";
+if(cast[1]!= null)
+{
+    
+Console.WriteLine($"Cast is {cast[1].ToUpper()}");
+}
+
+
+Movie[] shelf = new Movie[2];
+shelf[0] = new Movie("Jilla",150m);
+
+foreach(Movie m in shelf)
+{
+    if(m != null)
     {
-        get {return _seats;}
+      Console.WriteLine($"Movie name is {m.Title} and price {m.Price}");
+   
     }
-
-    public string _name;
-    public bool Bookseats(int count)
+    else
     {
-        if (count <= 0 || count > _seats)
+         Console.WriteLine($"Not Found");
+   
+    }
+   }
+
+static Movie? FoundMovie(string title)
+{
+    Movie[] all = {new Movie("Leo",150m),new Movie("Beast",150m)};
+    
+    foreach(Movie Candidate in all)
+    {
+        if(title == Candidate.Title)
         {
-            return false;
-        }
-        else
-        {
-            _seats = _seats - count;
-            return true;
+            return Candidate;
         }
     }
-    public Theatre(string name, int seats)
+    return null;
+}
+
+
+
+class Movie
+{
+    
+  public string Title { get; set;}
+
+  public decimal Price {get;set;}
+
+  public Movie(string name,decimal prices)
     {
-        _seats = seats;
-        _name = name;
-
+        Title = name;
+        Price = prices;
     }
-
 
 }
