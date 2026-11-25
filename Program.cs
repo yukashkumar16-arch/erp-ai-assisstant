@@ -1,73 +1,70 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
+﻿
+Movielibrary lib = new Movielibrary();
+Console.WriteLine(lib.AddMovie(new Movie("KAKA",150)));
+Console.WriteLine(lib.AddMovie(new Movie("Jilla",160)));
+Console.WriteLine(lib.AddMovie(new Movie("GTA", 170)));
+Console.WriteLine(lib.AddMovie(new Movie("KAKA", 150)));
+Console.WriteLine($"Movie Count is {lib.count}");
 
-Movie? found = FoundMovie("Master");
 
-if(found == null)
+class Movielibrary
 {
-    
-Console.WriteLine($"not found");
-}
-else
-{
-    
-Console.WriteLine($"found{found.Title}");
-}
+    private List<Movie> _movies = new List<Movie>();
 
-
-string[] cast = new string[3];
-cast[0] = "Vijay";
-if(cast[1]!= null)
-{
-    
-Console.WriteLine($"Cast is {cast[1].ToUpper()}");
-}
-
-
-Movie[] shelf = new Movie[2];
-shelf[0] = new Movie("Jilla",150m);
-
-foreach(Movie m in shelf)
-{
-    if(m != null)
+    public int count
     {
-      Console.WriteLine($"Movie name is {m.Title} and price {m.Price}");
-   
+        get
+        { return _movies.Count; }
     }
-    else
-    {
-         Console.WriteLine($"Not Found");
-   
-    }
-   }
 
-static Movie? FoundMovie(string title)
-{
-    Movie[] all = {new Movie("Leo",150m),new Movie("Beast",150m)};
-    
-    foreach(Movie Candidate in all)
+    public bool AddMovie(Movie M1)
     {
-        if(title == Candidate.Title)
-        {
-            return Candidate;
-        }
+        
+            foreach (Movie m in _movies)
+            {
+                if (m.Title == M1.Title)
+                {
+                    return false;
+                }
+                
+            }
+        
+            _movies.Add(M1);
+             return true;
+
     }
-    return null;
+
+
 }
-
-
 
 class Movie
 {
-    
-  public string Title { get; set;}
 
-  public decimal Price {get;set;}
+    public string Title { get; set; }
 
-  public Movie(string name,decimal prices)
+    private decimal _price;
+
+    public decimal Price
     {
-        Title = name;
-        Price = prices;
+        get { return _price; }
+        set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentException("Value cannot be negative");
+            }
+            _price = value;
+        }
     }
 
+    public Movie(string title, decimal price)
+    {
+        Title = title;
+        Price = price;
+    }
+
+
+
+
 }
+
