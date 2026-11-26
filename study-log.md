@@ -37,3 +37,5 @@
 
    #25-11-2026 created one class which contain private list and
    movie library class to add the list or omitcheck
+
+   #26-11-2026 Learned new class and its list it has add remove and find methods.
